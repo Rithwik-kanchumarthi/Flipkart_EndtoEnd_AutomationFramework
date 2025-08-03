@@ -1,0 +1,43 @@
+# =========================
+# Java + Maven + Eclipse
+# =========================
+
+# Maven output
+/target/
+
+# Logs
+*.log
+
+# Reports
+/cucumber-report.html
+/test-output/
+/surefire-reports/
+/extent-output/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA files (if you use it occasionally)
+*.iml
+.idea/
+
+# Cucumber rerun plugin
+rerun.txt
+
+# Config file secrets (optional, if you store credentials)
+config.properties
+
+# JSON or test result files
+*.json
+
+# Avoid accidentally committing screenshots or recordings
+/screenshots/
+*.png
+*.jpg
+*.mp4
