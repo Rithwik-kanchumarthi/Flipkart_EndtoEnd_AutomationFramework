@@ -1,0 +1,8 @@
+# Ignore target directory from language statistics
+target/** linguist-vendored
+
+# Ignore report HTML files from language statistics
+*.html linguist-vendored
+
+# Treat Java as the primary language
+*.java linguist-language=Java
