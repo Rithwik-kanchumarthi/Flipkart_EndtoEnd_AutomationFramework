@@ -1,5 +1,6 @@
 package com.flipkart.Hooks;
 
-public class Hooks {
+public class Hooks
+{
 
 }

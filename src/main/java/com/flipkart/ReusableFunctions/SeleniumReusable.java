@@ -73,7 +73,5 @@ public class SeleniumReusable extends Library
 		{
 			System.out.println("Screenshot not found");
 		}
-	}
-	
-	
+	}	
 }
