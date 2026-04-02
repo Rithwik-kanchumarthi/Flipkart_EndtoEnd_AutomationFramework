@@ -48,5 +48,16 @@ public class SearchMobile_Testcase extends Library
 	{
 	    sp.Result();
 	}
+	
+	@Then("Extract the result and print in console")
+	public void extract_the_result_and_print_in_console() {
+	    sp.PrintEntireResult();
+	}
+
+	@Then("Print the result and keep it in the console")
+	public void print_the_result_and_keep_it_in_the_console() {
+	    sp.PrintThirdResult();
+	}
+	
 
 }

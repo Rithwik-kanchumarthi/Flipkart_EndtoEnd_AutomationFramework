@@ -8,12 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = {"com/flipkart/Stepdefinitions", "com/flipkart/Hooks"},
-		plugin = {"pretty", "html:target/cucumber-report.html"},
-		tags = "@Test",
-		monochrome = true
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		)
 
-public class JunitTestRunner 
+public class JunitTestRunner
 {
 
 }

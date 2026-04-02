@@ -1,12 +1,15 @@
 package com.flipkart.ReusableFunctions;
 
 import java.io.File;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.flipkart.Baseclass.Library;
 
@@ -74,4 +77,42 @@ public class SeleniumReusable extends Library
 			System.out.println("Screenshot not found");
 		}
 	}	
+	
+	public void multipleGetText(List<WebElement> element)
+	{
+		List<WebElement> texts = element;
+		System.out.println(texts.size());
+		
+		for(WebElement text : texts)
+		{
+			String totalList = text.getText();
+			System.out.println("************************************");
+			System.out.println(totalList);
+		}
+		
+	}
+	
+	public void GetValue(WebElement element)
+	{
+		String text = element.getText();
+		System.out.println("++++++++++++++++++++++++++++++++");
+		System.out.println(text);
+	}
+	
+	public void dropDown(WebElement element, String text)
+	{
+		Select drp = new Select(element);
+		drp.selectByValue(text);
+	}
+	
+	public void scrollDown(WebElement element)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()", element);
+	}
+	
+	public void waits() throws InterruptedException
+	{
+		Thread.sleep(2000);
+	}
 }

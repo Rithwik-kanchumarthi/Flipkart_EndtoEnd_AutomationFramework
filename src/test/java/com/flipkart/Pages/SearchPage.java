@@ -1,5 +1,7 @@
 package com.flipkart.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,6 +30,11 @@ public class SearchPage extends Library
 	@FindBy(xpath="//html[@lang='en']")
 	WebElement searchResult;
 	
+	@FindBy(xpath="//div[@class='col col-7-12']")
+	List<WebElement> entireResult;
+	
+	@FindBy(xpath="(//div[@class='col col-7-12'])[3]")
+	WebElement thirdResult;
 	
 	public void Search(String Text)
 	{
@@ -49,6 +56,16 @@ public class SearchPage extends Library
 	{
 		System.out.println(searchResult.isDisplayed());
 		System.out.println(driver.getTitle());
+	}
+	
+	public void PrintEntireResult()
+	{
+		se.multipleGetText(entireResult);
+	}
+	
+	public void PrintThirdResult()
+	{
+		se.GetValue(thirdResult);
 	}
 
 }
