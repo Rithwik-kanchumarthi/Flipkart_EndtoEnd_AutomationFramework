@@ -8,8 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = {"com/flipkart/Stepdefinitions", "com/flipkart/Hooks"},
-		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-		)
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},tags= "@Test3")
 
 public class JunitTestRunner
 {
